@@ -1,6 +1,5 @@
 absl-py==0.13.0
 google-pasta==0.2.0
-grpcio==1.38.1
 h5py==2.10.0
 Keras-Preprocessing==1.1.2
 numpy==1.19.5
