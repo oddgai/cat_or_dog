@@ -1,7 +1,7 @@
 import numpy as np
 import streamlit as st
 import tensorflow as tf
-from PIL import Image
+from PIL import Image, ImageOps
 
 
 ### モデル部分
@@ -60,6 +60,7 @@ if uploaded_file is not None:
 	try:
 		# 画像を読み込む
 		uploaded_img = Image.open(uploaded_file)
+		uploaded_img = ImageOps.exif_transpose(uploaded_img)  # 画像を適切な向きに補正する
 
 		# 犬猫判定
 		pred = sample_predict(uploaded_img)
