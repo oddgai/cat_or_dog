@@ -66,8 +66,8 @@ if uploaded_file is not None:
 
 		# 結果表示
 		st.info(f"これは**{get_result(pred)}**です！")
-		point = np.int(np.round(pred, 2)*20)
-		st.text(f"犬 0 |{'-'*point}*{'-'*(19-point)}| 100 猫")
+		score = np.int(np.round(pred, 2)*20)
+		st.text(f"犬 0 |{'-'*score}*{'-'*(19-score)}| 100 猫")
 		st.image(uploaded_img, use_column_width=True)
 	except:
-		st.error("画像ファイルをアップロードしてください！")
+		st.error("判定できませんでした・・・適切な画像をアップロードしてください！")
